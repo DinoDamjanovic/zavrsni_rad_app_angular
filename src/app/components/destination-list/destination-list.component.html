@@ -1,0 +1,10 @@
+<div class="grid gap-4 pb-4 px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <ng-container *ngFor="let destination of destinations">
+    <ng-container *ngIf="!onlyFavorites || destination.isFavorite">
+      <app-destination-card
+        [id]="destination.id"
+        [destination]="destination">
+      </app-destination-card>
+    </ng-container>
+  </ng-container>
+</div>

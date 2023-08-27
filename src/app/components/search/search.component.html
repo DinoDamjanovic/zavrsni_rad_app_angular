@@ -1,0 +1,9 @@
+<div class="flex items-center">
+  <fa-icon [icon]="searchIcon" class="mr-2" [style]="{ 'color': 'gray', 'font-size': '20px' }"/>
+  <input
+    class="text-gray-500 border rounded px-3 py-2 transition ease-in-out duration-150 focus:outline-none focus:border-blue-500"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchTermChange()"
+    placeholder="Search"
+  />
+</div>

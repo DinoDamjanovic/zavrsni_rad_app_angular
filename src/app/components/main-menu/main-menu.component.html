@@ -1,0 +1,27 @@
+<div class="bg-gray-100 py-4 px-6 flex justify-between items-center mb-4">
+  <div class="flex justify-between w-full">
+    <button
+      [ngClass]="{
+        'font-semibold': true,
+        'text-blue-500': destinationsDataService.activeTab === MenuOption.DESTINATIONS,
+        'text-gray-500': destinationsDataService.activeTab !== MenuOption.DESTINATIONS
+    }"
+      (click)="setActiveTab(MenuOption.DESTINATIONS)"
+    >
+      Destinations
+    </button>
+
+    <app-search/>
+
+    <button
+      [ngClass]="{
+        'font-semibold': true,
+        'text-blue-500': destinationsDataService.activeTab === MenuOption.FAVORITES,
+        'text-gray-500': destinationsDataService.activeTab !== MenuOption.FAVORITES
+    }"
+      (click)="setActiveTab(MenuOption.FAVORITES)"
+    >
+      Favorites
+    </button>
+  </div>
+</div>

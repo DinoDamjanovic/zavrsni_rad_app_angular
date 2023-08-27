@@ -1,0 +1,8 @@
+<app-main-container>
+  <app-menu/>
+  <div class="flex-grow overflow-y-auto">
+    <app-destination-list [onlyFavorites]="false"
+                          *ngIf="destinationsDataService.activeTab === MenuOption.DESTINATIONS"/>
+    <app-destination-list [onlyFavorites]="true" *ngIf="destinationsDataService.activeTab === MenuOption.FAVORITES"/>
+  </div>
+</app-main-container>
