@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {MenuOption} from "../../../constants";
-import {DestinationsDataService} from "../../services/destinations-data.service";
+import { Component } from '@angular/core';
+import { MenuOption } from "../../../constants";
+import { DestinationsDataService } from "../../services/destinations-data.service";
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,9 @@ import {DestinationsDataService} from "../../services/destinations-data.service"
 })
 export class HomeComponent {
 
-  protected readonly MenuOption = MenuOption;
+  public readonly MenuOption = MenuOption;
 
-  constructor(protected destinationsDataService: DestinationsDataService) {
+  constructor(public destinationsDataService: DestinationsDataService) {
   }
 
 }

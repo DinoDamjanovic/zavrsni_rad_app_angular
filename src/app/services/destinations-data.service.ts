@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {MenuOption} from "../../constants";
-import {BehaviorSubject, Observable} from "rxjs";
+import { Injectable } from '@angular/core';
+import { MenuOption } from "../../constants";
+import { BehaviorSubject, Observable } from "rxjs";
 
 export interface DestinationData {
   id: number;
@@ -116,7 +116,7 @@ export class DestinationsDataService {
   toggleFavorite(id: number): void {
     const updatedDestinations = this.allDestinationData.map(destination => {
       if (destination.id === id) {
-        return {...destination, isFavorite: !destination.isFavorite};
+        return { ...destination, isFavorite: !destination.isFavorite };
       }
       return destination;
     });

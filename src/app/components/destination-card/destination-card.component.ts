@@ -15,15 +15,15 @@ export interface DestinationCardProps {
 })
 export class DestinationCardComponent {
   @Input() destination!: DestinationCardProps;
-  protected heartIcon = faHeart;
+  public heartIcon = faHeart;
 
   constructor(private destinationsDataService: DestinationsDataService) {}
 
-  protected toggleFavorite() {
+  public toggleFavorite() {
     this.destinationsDataService.toggleFavorite(this.destination.id);
   }
 
-  protected get heartColor(): string {
+  public get heartColor(): string {
     const activeDestinationData = this.destinationsDataService.activeDestinationDataSubject.getValue();
     return activeDestinationData.find(destination => this.destination.id === destination.id)?.isFavorite ? 'red' : 'gray';
   }
