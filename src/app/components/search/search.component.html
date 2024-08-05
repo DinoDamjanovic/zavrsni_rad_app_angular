@@ -1,7 +1,8 @@
 <div class="flex items-center">
-  <fa-icon [icon]="searchIcon" class="mr-2" [style]="{ 'color': 'gray', 'font-size': '20px' }" />
+  <fa-icon [icon]="searchIcon" class="mr-2 text-gray-500" [style]="{ 'font-size': '20px' }"></fa-icon>
   <input
-    class="text-gray-500 border rounded px-3 py-2 transition ease-in-out duration-150 focus:outline-none focus:border-blue-500"
+    class="text-gray-500 border rounded transition ease-in-out duration-150 focus:outline-none focus:border-blue-500
+             px-3 py-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
     [(ngModel)]="searchTerm"
     (ngModelChange)="onSearchTermChange()"
     placeholder="{{searchPlaceholder}}"
