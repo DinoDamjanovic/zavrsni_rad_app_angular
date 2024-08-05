@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MenuOption } from "../../constants";
 import { BehaviorSubject, Observable } from "rxjs";
+import { environment } from "../../environments/environment";
 
 export interface DestinationData {
   id: number;
@@ -13,18 +14,18 @@ export interface DestinationData {
   providedIn: 'root'
 })
 export class DestinationsDataService {
-  private readonly MountainLake: string = "../../assets/img/mountain_lake.png";
-  private readonly HiddenForest: string = "../../assets/img/hidden_forest.png";
-  private readonly LakeRoad: string = "../../assets/img/lake_road.png";
-  private readonly ForestfallHike: string = "../../assets/img/forestfall_hike.png";
-  private readonly AzureBeachHideout: string = "../../assets/img/azure_beach_hideout.png";
-  private readonly MountainRetreat: string = "../../assets/img/mountain_retreat.png";
-  private readonly TropicalParadise: string = "../../assets/img/tropical_paradise.png";
-  private readonly AutumnDream: string = "../../assets/img/autumn_dream.png";
-  private readonly SunnyMeadow: string = "../../assets/img/sunny_meadow.png";
-  private readonly SunsetDocks: string = "../../assets/img/sunset_docks.png";
-  private readonly LakeOfSilence: string = "../../assets/img/lake_of_silence.png";
-  private readonly SpringField: string = "../../assets/img/spring_field.png";
+  private readonly MountainLake: string = environment.assetBasePath + "mountain_lake.png";
+  private readonly HiddenForest: string = environment.assetBasePath + "hidden_forest.png";
+  private readonly LakeRoad: string = environment.assetBasePath + "lake_road.png";
+  private readonly ForestfallHike: string = environment.assetBasePath + "forestfall_hike.png";
+  private readonly AzureBeachHideout: string = environment.assetBasePath + "azure_beach_hideout.png";
+  private readonly MountainRetreat: string = environment.assetBasePath + "mountain_retreat.png";
+  private readonly TropicalParadise: string = environment.assetBasePath + "tropical_paradise.png";
+  private readonly AutumnDream: string = environment.assetBasePath + "autumn_dream.png";
+  private readonly SunnyMeadow: string = environment.assetBasePath + "sunny_meadow.png";
+  private readonly SunsetDocks: string = environment.assetBasePath + "sunset_docks.png";
+  private readonly LakeOfSilence: string = environment.assetBasePath + "lake_of_silence.png";
+  private readonly SpringField: string = environment.assetBasePath + "spring_field.png";
 
   public activeTab: MenuOption = MenuOption.DESTINATIONS;
   private isSearchActive: boolean = false;
